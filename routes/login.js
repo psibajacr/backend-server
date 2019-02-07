@@ -57,7 +57,7 @@ app.post('/google', async(req, res) => {
             if (usuarioDB.google === false) {
                 return res.status(400).json({
                     ok: false,
-                    mensaje: 'Debe de usar si autenticación normal.'
+                    mensaje: 'Debe de usar su autenticación normal.'
                 });
             } else {
                 var token = jwt.sign({ usuario: usuarioDB }, SEED, { expiresIn: 14400 });
